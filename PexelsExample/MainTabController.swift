@@ -12,22 +12,6 @@ class MainTabController: UITabBarController, UITabBarControllerDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     delegate = self
-    customizeTabBarView()
-  }
-
-  private func customizeTabBarView() {
-    let tabBarHeight = tabBar.frame.size.height
-    self.tabBar.layer.masksToBounds = true
-    self.tabBar.isTranslucent = true
-    self.tabBar.barStyle = .default
-    self.tabBar.layer.cornerRadius = tabBarHeight/3
-    self.tabBar.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
-  }
-
-  override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-    let viewWidth = self.view.bounds.width
-    tabBar.frame = CGRect(x: 15, y: view.frame.maxY - 30 - 49, width: viewWidth - 30, height: 49)
   }
 
   override func viewWillAppear(_ animated: Bool) {
