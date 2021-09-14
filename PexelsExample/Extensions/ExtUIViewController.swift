@@ -8,19 +8,19 @@
 import UIKit
 
 extension UIViewController {
-  func configureNavigationBar(largeTitleColor: UIColor, backgoundColor: UIColor, tintColor: UIColor, title: String, preferredLargeTitle: Bool) {
+  func configureNavBar(titleColor: UIColor, backgoundColor: UIColor, tintColor: UIColor, title: String) {
     if #available(iOS 13.0, *) {
       let navBarAppearance = UINavigationBarAppearance()
       navBarAppearance.configureWithOpaqueBackground()
-      navBarAppearance.largeTitleTextAttributes = [.foregroundColor: largeTitleColor]
-      navBarAppearance.titleTextAttributes = [.foregroundColor: largeTitleColor]
+      navBarAppearance.largeTitleTextAttributes = [.foregroundColor: titleColor]
+      navBarAppearance.titleTextAttributes = [.foregroundColor: titleColor]
       navBarAppearance.backgroundColor = backgoundColor
 
       navigationController?.navigationBar.standardAppearance = navBarAppearance
       navigationController?.navigationBar.compactAppearance = navBarAppearance
       navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
 
-      navigationController?.navigationBar.prefersLargeTitles = preferredLargeTitle
+      navigationController?.navigationBar.prefersLargeTitles = true
       navigationItem.largeTitleDisplayMode = .always
       navigationController?.navigationBar.isTranslucent = false
       navigationController?.navigationBar.tintColor = tintColor
@@ -34,5 +34,3 @@ extension UIViewController {
     }
   }
 }
-
-

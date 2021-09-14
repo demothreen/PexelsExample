@@ -17,7 +17,6 @@ class VideoVC: BaseVC {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-
   }
 
 }

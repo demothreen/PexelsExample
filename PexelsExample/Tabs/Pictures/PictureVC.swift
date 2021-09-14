@@ -17,6 +17,5 @@ class PictureVC: BaseVC {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-
   }
 }

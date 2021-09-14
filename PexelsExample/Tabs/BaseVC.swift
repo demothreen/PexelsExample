@@ -10,7 +10,7 @@ import UIKit
 class BaseVC: UIViewController {
   lazy var navTitle: String = "" {
     didSet {
-      configureNavigationBar(largeTitleColor: .cDarkestGray, backgoundColor: .cLightGray, tintColor: .cDarkestGray, title: navTitle, preferredLargeTitle: true)
+      configureNavBar(titleColor: .cDarkestGray, backgoundColor: .cLightGray, tintColor: .cDarkestGray, title: navTitle)
     }
   }
 
