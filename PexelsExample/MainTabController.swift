@@ -23,7 +23,7 @@ class MainTabController: UITabBarController, UITabBarControllerDelegate {
     pictureVC.tabBarItem = pictureIcon
     videoVC.tabBarItem = videoIcon
     let controllers = [pictureVC, videoVC]
-    self.viewControllers = controllers
+    self.viewControllers = controllers.map { UINavigationController(rootViewController: $0) }
   }
 
   func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
