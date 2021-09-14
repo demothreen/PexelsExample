@@ -10,12 +10,12 @@ import UIKit
 class BaseVC: UIViewController {
   lazy var navTitle: String = "" {
     didSet {
-      configureNavigationBar(largeTitleColor: .black, backgoundColor: .white, tintColor: .black, title: navTitle, preferredLargeTitle: true)
+      configureNavigationBar(largeTitleColor: .cDarkestGray, backgoundColor: .cLightGray, tintColor: .cDarkestGray, title: navTitle, preferredLargeTitle: true)
     }
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .white
+    view.backgroundColor = .cLightGray
   }
 }
