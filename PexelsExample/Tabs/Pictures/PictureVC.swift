@@ -7,16 +7,16 @@
 
 import UIKit
 
-class PictureVC: UIViewController {
+class PictureVC: BaseVC {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    configureNavigationBar(largeTitleColor: .black, backgoundColor: .white, tintColor: .black, title: "Pictures", preferredLargeTitle: true)
+    navTitle = "Pictures"
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .white
+
 
   }
 }

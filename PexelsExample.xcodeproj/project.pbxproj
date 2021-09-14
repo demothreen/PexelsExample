@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A19CD8926F0FA770012B7BA /* ExtUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CD8826F0FA770012B7BA /* ExtUIViewController.swift */; };
+		4A19CD8B26F0FBE20012B7BA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CD8A26F0FBE20012B7BA /* BaseVC.swift */; };
 		4A3C1EAE26E15FD20012E074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3C1EAD26E15FD20012E074 /* AppDelegate.swift */; };
 		4A3C1EB026E15FD20012E074 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3C1EAF26E15FD20012E074 /* SceneDelegate.swift */; };
 		4A3C1EB526E15FD20012E074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3C1EB326E15FD20012E074 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		13F69D62BBAF59F9FF610606 /* Pods-PexelsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PexelsExample.release.xcconfig"; path = "Target Support Files/Pods-PexelsExample/Pods-PexelsExample.release.xcconfig"; sourceTree = "<group>"; };
 		4A19CD8826F0FA770012B7BA /* ExtUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIViewController.swift; sourceTree = "<group>"; };
+		4A19CD8A26F0FBE20012B7BA /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		4A3C1EAA26E15FD20012E074 /* PexelsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PexelsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3C1EAD26E15FD20012E074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A3C1EAF26E15FD20012E074 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				4A3C1EC526E162B90012E074 /* Videos */,
 				4A3C1EC426E162B00012E074 /* Pictures */,
+				4A19CD8A26F0FBE20012B7BA /* BaseVC.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				4A19CD8926F0FA770012B7BA /* ExtUIViewController.swift in Sources */,
 				4A3C1EAE26E15FD20012E074 /* AppDelegate.swift in Sources */,
 				4A3C1EC226E161720012E074 /* MainTabController.swift in Sources */,
+				4A19CD8B26F0FBE20012B7BA /* BaseVC.swift in Sources */,
 				4A3C1EB026E15FD20012E074 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

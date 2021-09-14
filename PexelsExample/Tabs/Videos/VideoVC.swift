@@ -7,10 +7,16 @@
 
 import UIKit
 
-class VideoVC: UIViewController {
+class VideoVC: BaseVC {
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navTitle = "Videos"
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
 
   }
 
