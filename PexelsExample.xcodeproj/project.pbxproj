@@ -11,6 +11,7 @@
 		4A19CD8B26F0FBE20012B7BA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CD8A26F0FBE20012B7BA /* BaseVC.swift */; };
 		4A19CD8E26F127810012B7BA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A19CD8D26F127810012B7BA /* Colors.xcassets */; };
 		4A19CD9026F12BBF0012B7BA /* ExtUIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CD8F26F12BBF0012B7BA /* ExtUIColors.swift */; };
+		4A19CD9326F13AA90012B7BA /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CD9226F13AA90012B7BA /* FavoriteVC.swift */; };
 		4A3C1EAE26E15FD20012E074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3C1EAD26E15FD20012E074 /* AppDelegate.swift */; };
 		4A3C1EB026E15FD20012E074 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3C1EAF26E15FD20012E074 /* SceneDelegate.swift */; };
 		4A3C1EB726E15FDA0012E074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3C1EB626E15FDA0012E074 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		4A19CD8A26F0FBE20012B7BA /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		4A19CD8D26F127810012B7BA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4A19CD8F26F12BBF0012B7BA /* ExtUIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIColors.swift; sourceTree = "<group>"; };
+		4A19CD9226F13AA90012B7BA /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
 		4A3C1EAA26E15FD20012E074 /* PexelsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PexelsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3C1EAD26E15FD20012E074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A3C1EAF26E15FD20012E074 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		4A19CD9126F13A8B0012B7BA /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				4A19CD9226F13AA90012B7BA /* FavoriteVC.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 		4A3C1EA126E15FD10012E074 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +118,7 @@
 		4A3C1EC326E1628F0012E074 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				4A19CD9126F13A8B0012B7BA /* Favorite */,
 				4A3C1EC526E162B90012E074 /* Videos */,
 				4A3C1EC426E162B00012E074 /* Pictures */,
 				4A19CD8A26F0FBE20012B7BA /* BaseVC.swift */,
@@ -251,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A3C1EC926E163200012E074 /* VideoVC.swift in Sources */,
+				4A19CD9326F13AA90012B7BA /* FavoriteVC.swift in Sources */,
 				4A3C1EC726E163100012E074 /* PictureVC.swift in Sources */,
 				4A19CD8926F0FA770012B7BA /* ExtUIViewController.swift in Sources */,
 				4A3C1EAE26E15FD20012E074 /* AppDelegate.swift in Sources */,

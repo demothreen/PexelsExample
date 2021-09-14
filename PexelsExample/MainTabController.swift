@@ -19,9 +19,11 @@ class MainTabController: UITabBarController, UITabBarControllerDelegate {
     super.viewWillAppear(animated)
     let pictureVC = PictureVC()
     let videoVC = VideoVC()
+    let favVC = FavoriteVC()
     pictureVC.tabBarItem = UITabBarItem(title: "Pictures", image: UIImage(named: "picture"), tag: 1)
     videoVC.tabBarItem = UITabBarItem(title: "Videos", image: UIImage(named: "video"), tag: 1)
-    let controllers = [pictureVC, videoVC]
+    favVC.tabBarItem = UITabBarItem(title: "Favorite", image: UIImage(named: "favorite"), tag: 1)
+    let controllers = [pictureVC, videoVC, favVC]
     self.viewControllers = controllers.map { UINavigationController(rootViewController: $0) }
   }
 
