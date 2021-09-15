@@ -33,8 +33,8 @@
 		4A19CD8F26F12BBF0012B7BA /* ExtUIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIColors.swift; sourceTree = "<group>"; };
 		4A19CD9226F13AA90012B7BA /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
 		4A19CDD226F21CF80012B7BA /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
-		4A19CDD826F24BA80012B7BA /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		4A19CDDA26F2961E0012B7BA /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		4A19CDDD26F298CF0012B7BA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		4A3C1EAA26E15FD20012E074 /* PexelsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PexelsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3C1EAD26E15FD20012E074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A3C1EAF26E15FD20012E074 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		4A3C1EA126E15FD10012E074 = {
 			isa = PBXGroup;
 			children = (
-				4A19CDD826F24BA80012B7BA /* Secrets.xcconfig */,
+				4A19CDDD26F298CF0012B7BA /* Config.xcconfig */,
 				4A3C1EAC26E15FD20012E074 /* PexelsExample */,
 				4A3C1EAB26E15FD20012E074 /* Products */,
 				FEECFE5CE5D7A39DE5558F2B /* Pods */,
@@ -333,7 +333,7 @@
 /* Begin XCBuildConfiguration section */
 		4A3C1EBC26E15FDA0012E074 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A19CDD826F24BA80012B7BA /* Secrets.xcconfig */;
+			baseConfigurationReference = 4A19CDDD26F298CF0012B7BA /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -395,7 +395,7 @@
 		};
 		4A3C1EBD26E15FDA0012E074 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A19CDD826F24BA80012B7BA /* Secrets.xcconfig */;
+			baseConfigurationReference = 4A19CDDD26F298CF0012B7BA /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
