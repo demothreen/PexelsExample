@@ -20,9 +20,9 @@ class MainTabController: UITabBarController, UITabBarControllerDelegate {
     let pictureVC = PictureVC()
     let videoVC = VideoVC()
     let favVC = FavoriteVC()
-    pictureVC.tabBarItem = UITabBarItem(title: "Pictures", image: UIImage(named: "picture"), tag: 1)
-    videoVC.tabBarItem = UITabBarItem(title: "Videos", image: UIImage(named: "video"), tag: 1)
-    favVC.tabBarItem = UITabBarItem(title: "Favorite", image: UIImage(named: "favorite"), tag: 1)
+    pictureVC.tabBarItem = getTabBarItem(title: "Pictures", imgName: "picture")
+    videoVC.tabBarItem = getTabBarItem(title: "Videos", imgName: "video")
+    favVC.tabBarItem = getTabBarItem(title: "Favorite", imgName: "favorite")
     let controllers = [pictureVC, videoVC, favVC]
     self.viewControllers = controllers.map { UINavigationController(rootViewController: $0) }
   }
@@ -33,8 +33,15 @@ class MainTabController: UITabBarController, UITabBarControllerDelegate {
     self.tabBar.layer.masksToBounds = true
     UITabBar.appearance().tintColor = .cYellow
     self.tabBar.unselectedItemTintColor = .white
+
     let tabBarHeight = tabBar.frame.size.height
     self.tabBar.layer.cornerRadius = tabBarHeight/2
+  }
+
+  private func getTabBarItem(title: String, imgName: String) -> UITabBarItem {
+    let item = UITabBarItem(title: title, image: UIImage(named: imgName), tag: 1)
+    item.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+    return item
   }
 
   override func viewDidLayoutSubviews() {
