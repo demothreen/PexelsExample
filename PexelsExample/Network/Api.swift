@@ -45,10 +45,10 @@ class Api {
     task.resume()
   }
 
-  func popular() {
+  func getPopularPhotos(onComplition: @escaping ([Photos], NSError?) -> Void) {
     let url = "https://api.pexels.com/v1/popular"
-    makeHTTPRequest(model: Picture.self, url: url, method: .GET) { data, err in
-      print("d", data)
+    makeHTTPRequest(model: Result.self, url: url, method: .GET) { data, error in
+      onComplition(data?.photos ?? [], error as NSError?)
     }
   }
 }

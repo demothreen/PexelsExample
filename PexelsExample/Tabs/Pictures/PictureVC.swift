@@ -8,6 +8,7 @@
 import UIKit
 
 class PictureVC: BaseVC {
+  private let pictureVM = PictureVM()
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -16,7 +17,13 @@ class PictureVC: BaseVC {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    Api.shared.popular()
+    pictureVM.delegate = self
+    pictureVM.getPhotos()
 
+  }
+}
+
+extension PictureVC: PictureVMDelegate {
+  func photosUpdated() {
   }
 }
