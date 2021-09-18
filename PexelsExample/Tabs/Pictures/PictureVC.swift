@@ -14,7 +14,7 @@ class PictureVC: BaseVC {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .vertical
     let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-    view.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+    view.register(PictureCVCell.self, forCellWithReuseIdentifier: "Cell")
     view.backgroundColor = .clear
     return view
   }()
@@ -35,6 +35,7 @@ class PictureVC: BaseVC {
     view.addSubview(collectionView)
     collectionView.delegate = self
     collectionView.dataSource = self
+    collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     collectionView.snp.makeConstraints { make in
       make.top.left.right.bottom.equalTo(view)
     }
@@ -47,8 +48,8 @@ extension PictureVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSou
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath)
-    //    cell.photo = photos[indexPath.item]
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath) as! PictureCVCell // swiftlint:disable:this force_cast
+    cell.photo = pictureVM.photos[indexPath.row]
     cell.backgroundColor = .green
     return cell
   }

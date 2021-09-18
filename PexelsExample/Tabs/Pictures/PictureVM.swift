@@ -13,7 +13,7 @@ protocol PictureVMDelegate: AnyObject {
 
 class PictureVM {
   weak var delegate: PictureVMDelegate?
-  var photos: [Photos] = [] {
+  var photos: [Photo] = [] {
     didSet {
       delegate?.photosUpdated()
     }

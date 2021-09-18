@@ -12,10 +12,10 @@ struct Result: Codable {
   let page: Int
   let per_page: Int // swiftlint:disable:this identifier_name
   let next_page: String // swiftlint:disable:this identifier_name
-  let photos: [Photos]
+  let photos: [Photo]
 }
 
-struct Photos: Codable {
+struct Photo: Codable {
   let id: Int // swiftlint:disable:this identifier_name
   let width: Int
   let height: Int
@@ -25,4 +25,16 @@ struct Photos: Codable {
   let photographer_id: Int // swiftlint:disable:this identifier_name
   let avg_color: String // swiftlint:disable:this identifier_name
   let liked: Bool
+  let src: PhotoSrc
+}
+
+struct PhotoSrc: Codable {
+  var original: String
+  var large2x: String
+  var large: String
+  var medium: String
+  var small: String
+  var portrait: String
+  var landscape: String
+  var tiny: String
 }
