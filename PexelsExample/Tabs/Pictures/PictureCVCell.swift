@@ -8,7 +8,7 @@
 import UIKit
 
 class PictureCVCell: UICollectionViewCell {
-  private let imageView: UIImageView = {
+  let imageView: UIImageView = {
     let image = UIImageView()
     image.contentMode = .scaleAspectFill
     return image
