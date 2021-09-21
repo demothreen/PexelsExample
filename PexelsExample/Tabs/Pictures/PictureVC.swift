@@ -11,9 +11,7 @@ import SnapKit
 class PictureVC: BaseVC {
   private let pictureVM = PictureVM()
   fileprivate var collectionView: UICollectionView = {
-    let layout = UICollectionViewFlowLayout()
-    layout.scrollDirection = .vertical
-    let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+    let view = UICollectionView(frame: .zero, collectionViewLayout: CustomLayout())
     view.register(PictureCVCell.self, forCellWithReuseIdentifier: "Cell")
     view.backgroundColor = .clear
     return view
@@ -65,5 +63,11 @@ extension PictureVC: PictureVMDelegate {
     DispatchQueue.main.async {
       self.collectionView.reloadData()
     }
+  }
+}
+
+extension PictureVC: CustomLayoutDelegate {
+  func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+    return 0.0
   }
 }
