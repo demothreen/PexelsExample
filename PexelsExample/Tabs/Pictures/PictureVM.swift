@@ -12,6 +12,7 @@ protocol PictureVMDelegate: AnyObject {
 }
 
 class PictureVM {
+  private var page: Int = 1
   weak var delegate: PictureVMDelegate?
   var photos: [Photo] = [] {
     didSet {
@@ -20,7 +21,8 @@ class PictureVM {
   }
 
   func getPhotos() {
-    Api.shared.getPopularPhotos { photos, err in
+    let params: [SearchParams: Any] = [.page: page]
+    Api.shared.getPopularPhotos(params: params) { photos, err in
       if err == nil {
         self.photos = photos
       }

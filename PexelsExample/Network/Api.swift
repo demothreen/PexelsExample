@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+enum SearchParams: String {
+  case perPage = "per_page"
+  case page
+}
+
 enum RequestMethod: String {
   case GET
   case POST
@@ -45,8 +50,12 @@ class Api {
     task.resume()
   }
 
-  func getPopularPhotos(onComplition: @escaping ([Photo], NSError?) -> Void) {
-    let url = "https://api.pexels.com/v1/popular"
+  func getPopularPhotos(params: [SearchParams: Any], onComplition: @escaping ([Photo], NSError?) -> Void) {
+    var page: Int = 1
+    if params[.page] != nil {
+      page = params[.page] as? Int ?? 1
+    }
+    let url = "https://api.pexels.com/v1/popular/?page=\(page)"
     makeHTTPRequest(model: Result.self, url: url, method: .GET) { data, error in
       onComplition(data?.photos ?? [], error as NSError?)
     }

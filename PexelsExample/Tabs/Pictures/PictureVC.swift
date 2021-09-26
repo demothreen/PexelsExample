@@ -51,7 +51,6 @@ extension PictureVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSou
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath) as! PictureCVCell // swiftlint:disable:this force_cast
     cell.photo = pictureVM.photos[indexPath.row]
-    cell.backgroundColor = .green
     return cell
   }
 
