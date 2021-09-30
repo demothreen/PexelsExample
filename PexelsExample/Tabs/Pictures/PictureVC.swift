@@ -58,12 +58,29 @@ extension PictureVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSou
     let itemSize = (collectionView.frame.width - (collectionView.contentInset.left + collectionView.contentInset.right + 10)) / 2 // swiftlint:disable:this line_length
     return CGSize(width: itemSize, height: itemSize)
   }
+
+  // swiftlint:disable:next line_length
+  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    if indexPath.row == pictureVM.photos.count - 1 {
+      pictureVM.loadMore()
+    }
+  }
 }
 
 extension PictureVC: PictureVMDelegate {
   func photosUpdated() {
     DispatchQueue.main.async {
       self.collectionView.reloadData()
+    }
+  }
+
+  func loadedMore(rows: [Int]) {
+    var newRows = [IndexPath]()
+    for item in rows {
+      newRows.append(IndexPath(row: item, section: 0))
+    }
+    DispatchQueue.main.async {
+      self.collectionView.insertItems(at: newRows)
     }
   }
 }
