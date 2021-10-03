@@ -11,7 +11,7 @@ import SnapKit
 class PictureVC: BaseVC {
   private let pictureVM = PictureVM()
   fileprivate var collectionView: UICollectionView = {
-    let view = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
+    let view = UICollectionView(frame: .zero, collectionViewLayout: CustomLayout())
     view.register(PictureCVCell.self, forCellWithReuseIdentifier: "Cell")
     view.backgroundColor = .clear
     return view
@@ -31,9 +31,6 @@ class PictureVC: BaseVC {
 
   private func setCollectionView() {
     view.addSubview(collectionView)
-    let layout = CustomLayout()
-    layout.delegate = self
-    collectionView.collectionViewLayout = layout
     collectionView.delegate = self
     collectionView.dataSource = self
     collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
@@ -80,15 +77,8 @@ extension PictureVC: PictureVMDelegate {
       newRows.append(IndexPath(row: item, section: 0))
     }
     DispatchQueue.main.async {
+      self.collectionView.reloadData()
       self.collectionView.insertItems(at: newRows)
     }
-  }
-}
-
-extension PictureVC: CustomLayoutDelegate {
-  func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-    let picWidth = UIScreen.main.bounds.width / 2 - 20
-    let picHeight = Int(picWidth) * pictureVM.photos[indexPath.item].height / pictureVM.photos[indexPath.item].width
-    return CGFloat(picHeight)
   }
 }
