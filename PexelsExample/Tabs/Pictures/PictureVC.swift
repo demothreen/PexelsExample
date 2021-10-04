@@ -31,8 +31,14 @@ class PictureVC: BaseVC {
 
   private func setCollectionView() {
     view.addSubview(collectionView)
+    let layout = CustomLayout()
+    layout.delegate = self
+    collectionView.collectionViewLayout = layout
     collectionView.delegate = self
     collectionView.dataSource = self
+    collectionView.showsVerticalScrollIndicator = false
+    collectionView.showsHorizontalScrollIndicator = false
+    collectionView.alwaysBounceVertical = false
     collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     collectionView.snp.makeConstraints { make in
       make.top.left.right.bottom.equalTo(view)
@@ -80,5 +86,13 @@ extension PictureVC: PictureVMDelegate {
       self.collectionView.reloadData()
       self.collectionView.insertItems(at: newRows)
     }
+  }
+}
+
+extension PictureVC: PinterestLayoutDelegate {
+  func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
+    let picWidth = UIScreen.main.bounds.width / 2 - 20
+    let picHeight = Int(picWidth) * pictureVM.photos[indexPath.item].height / pictureVM.photos[indexPath.item].width
+    return CGFloat(picHeight)
   }
 }
