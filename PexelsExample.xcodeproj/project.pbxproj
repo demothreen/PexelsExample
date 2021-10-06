@@ -15,7 +15,7 @@
 		4A19CDD326F21CF90012B7BA /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CDD226F21CF80012B7BA /* Api.swift */; };
 		4A19CDDB26F2961E0012B7BA /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CDDA26F2961E0012B7BA /* Picture.swift */; };
 		4A19CE3926F3E7FA0012B7BA /* PictureVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CE3826F3E7FA0012B7BA /* PictureVM.swift */; };
-		4A19CE5D26F682D30012B7BA /* PictureCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CE5C26F682D20012B7BA /* PictureCVCell.swift */; };
+		4A19CE5D26F682D30012B7BA /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CE5C26F682D20012B7BA /* BaseCell.swift */; };
 		4A19CE5F26F686B80012B7BA /* ExtUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CE5E26F686B80012B7BA /* ExtUIImageView.swift */; };
 		4A19CE6226F8CDB90012B7BA /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CE6126F8CDB80012B7BA /* CustomLayout.swift */; };
 		4A3C1EAE26E15FD20012E074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3C1EAD26E15FD20012E074 /* AppDelegate.swift */; };
@@ -23,7 +23,6 @@
 		4A3C1EB726E15FDA0012E074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3C1EB626E15FDA0012E074 /* Assets.xcassets */; };
 		4A3C1EBA26E15FDA0012E074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3C1EB826E15FDA0012E074 /* LaunchScreen.storyboard */; };
 		4A3C1EC226E161720012E074 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3C1EC126E161720012E074 /* MainTabController.swift */; };
-		4A3C1EC726E163100012E074 /* PictureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3C1EC626E163100012E074 /* PictureVC.swift */; };
 		4A3C1EC926E163200012E074 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3C1EC826E163200012E074 /* VideoVC.swift */; };
 		4AD1E66B26E7F0A2004DDC97 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4AD1E66A26E7F0A2004DDC97 /* SnapKit */; };
 		E14A0F8FFE479A0D44BEBD58 /* Pods_PexelsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA23D083469D1A993B0B705 /* Pods_PexelsExample.framework */; };
@@ -40,7 +39,7 @@
 		4A19CDDA26F2961E0012B7BA /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		4A19CDDD26F298CF0012B7BA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		4A19CE3826F3E7FA0012B7BA /* PictureVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureVM.swift; sourceTree = "<group>"; };
-		4A19CE5C26F682D20012B7BA /* PictureCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCVCell.swift; sourceTree = "<group>"; };
+		4A19CE5C26F682D20012B7BA /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		4A19CE5E26F686B80012B7BA /* ExtUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIImageView.swift; sourceTree = "<group>"; };
 		4A19CE6126F8CDB80012B7BA /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
 		4A3C1EAA26E15FD20012E074 /* PexelsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PexelsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,7 +49,6 @@
 		4A3C1EB926E15FDA0012E074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A3C1EBB26E15FDA0012E074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A3C1EC126E161720012E074 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
-		4A3C1EC626E163100012E074 /* PictureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureVC.swift; sourceTree = "<group>"; };
 		4A3C1EC826E163200012E074 /* VideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
 		4BE2E22320D721442AE43A2E /* Pods-PexelsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PexelsExample.debug.xcconfig"; path = "Target Support Files/Pods-PexelsExample/Pods-PexelsExample.debug.xcconfig"; sourceTree = "<group>"; };
 		8FA23D083469D1A993B0B705 /* Pods_PexelsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PexelsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +162,7 @@
 				4A3C1EC526E162B90012E074 /* Videos */,
 				4A3C1EC426E162B00012E074 /* Pictures */,
 				4A19CD8A26F0FBE20012B7BA /* BaseVC.swift */,
+				4A19CE5C26F682D20012B7BA /* BaseCell.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -171,9 +170,7 @@
 		4A3C1EC426E162B00012E074 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
-				4A3C1EC626E163100012E074 /* PictureVC.swift */,
 				4A19CE3826F3E7FA0012B7BA /* PictureVM.swift */,
-				4A19CE5C26F682D20012B7BA /* PictureCVCell.swift */,
 			);
 			path = Pictures;
 			sourceTree = "<group>";
@@ -325,7 +322,6 @@
 			files = (
 				4A3C1EC926E163200012E074 /* VideoVC.swift in Sources */,
 				4A19CD9326F13AA90012B7BA /* FavoriteVC.swift in Sources */,
-				4A3C1EC726E163100012E074 /* PictureVC.swift in Sources */,
 				4A19CDDB26F2961E0012B7BA /* Picture.swift in Sources */,
 				4A19CE5F26F686B80012B7BA /* ExtUIImageView.swift in Sources */,
 				4A19CD8926F0FA770012B7BA /* ExtUIViewController.swift in Sources */,
@@ -335,7 +331,7 @@
 				4A19CD9026F12BBF0012B7BA /* ExtUIColors.swift in Sources */,
 				4A19CD8B26F0FBE20012B7BA /* BaseVC.swift in Sources */,
 				4A19CE3926F3E7FA0012B7BA /* PictureVM.swift in Sources */,
-				4A19CE5D26F682D30012B7BA /* PictureCVCell.swift in Sources */,
+				4A19CE5D26F682D30012B7BA /* BaseCell.swift in Sources */,
 				4A19CDD326F21CF90012B7BA /* Api.swift in Sources */,
 				4A3C1EB026E15FD20012E074 /* SceneDelegate.swift in Sources */,
 			);

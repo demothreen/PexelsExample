@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PictureCVCell: UICollectionViewCell {
+class BaseCell: UICollectionViewCell {
   private let imageView: UIImageView = {
     let image = UIImageView()
     image.contentMode = .scaleAspectFill
@@ -16,8 +16,8 @@ class PictureCVCell: UICollectionViewCell {
   private var photographerName: UILabel = {
     let label = UILabel()
     label.textColor = .white
-    label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
-    label.backgroundColor = .black.withAlphaComponent(0.4)
+    label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+    label.backgroundColor = .black.withAlphaComponent(0.6)
     return label
   }()
   var photo: Photo? {
