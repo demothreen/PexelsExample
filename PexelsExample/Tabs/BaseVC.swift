@@ -83,6 +83,11 @@ extension BaseVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
     return model.data.count
   }
 
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let fullVC = FullImageVC(url: model.data[indexPath.row].src.large)
+    present(fullVC, animated: true, completion: nil)
+  }
+
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath) as! BaseCell // swiftlint:disable:this force_cast line_length
     cell.photo = model.data[indexPath.row]
