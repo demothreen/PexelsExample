@@ -26,6 +26,7 @@ class BaseCell: UICollectionViewCell {
     favBtn.imageView?.tintColor = .white
     return favBtn
   }()
+  var saveFavorite: (() -> Void)?
   var photo: Photo? {
     didSet {
       setPhotoData()
@@ -55,15 +56,16 @@ class BaseCell: UICollectionViewCell {
   }
 
   private func setFavIcon() {
-    imageView.addSubview(favBtn)
+    contentView.addSubview(favBtn)
     favBtn.snp.makeConstraints { make in
       make.right.top.equalTo(imageView).inset(5)
     }
+    favBtn.isUserInteractionEnabled = true
     favBtn.addTarget(self, action: #selector(tapFav), for: .touchUpInside)
   }
 
-  @objc private func tapFav() {
-    print("### tapFav")
+  @objc private func tapFav(sender: UIButton) {
+    saveFavorite?()
   }
 
   private func setPhotoData() {

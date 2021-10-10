@@ -91,6 +91,9 @@ extension BaseVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath) as! BaseCell // swiftlint:disable:this force_cast line_length
     cell.photo = model.data[indexPath.row]
+    cell.saveFavorite = { [unowned self] in
+      print(model.data[indexPath.row].photographer)
+    }
     return cell
   }
 
