@@ -20,6 +20,12 @@ class BaseCell: UICollectionViewCell {
     label.backgroundColor = .black.withAlphaComponent(0.6)
     return label
   }()
+  private var favBtn: UIButton = {
+    var favBtn = UIButton()
+    favBtn.setImage(UIImage(named: "favorite")?.withRenderingMode(.alwaysTemplate), for: .normal)
+    favBtn.imageView?.tintColor = .white
+    return favBtn
+  }()
   var photo: Photo? {
     didSet {
       setPhotoData()
@@ -30,6 +36,7 @@ class BaseCell: UICollectionViewCell {
     super.init(frame: .zero)
     setImageView()
     setPhotographerName()
+    setFavIcon()
   }
 
   private func setImageView() {
@@ -45,6 +52,18 @@ class BaseCell: UICollectionViewCell {
       make.left.bottom.right.equalTo(imageView)
       make.height.equalTo(16)
     }
+  }
+
+  private func setFavIcon() {
+    imageView.addSubview(favBtn)
+    favBtn.snp.makeConstraints { make in
+      make.right.top.equalTo(imageView).inset(5)
+    }
+    favBtn.addTarget(self, action: #selector(tapFav), for: .touchUpInside)
+  }
+
+  @objc private func tapFav() {
+    print("### tapFav")
   }
 
   private func setPhotoData() {
