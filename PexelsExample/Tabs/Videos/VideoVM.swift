@@ -1,14 +1,14 @@
 //
-//  PictureVM.swift
+//  VideoVM.swift
 //  PexelsExample
 //
-//  Created by demothreen on 17.09.2021.
+//  Created by demothreen on 31.10.2021.
 //
 
 import Foundation
 
-class PictureVM: MainModelProtocol {
-  typealias Model = Photo
+class VideoVM: MainModelProtocol {
+  typealias Model = Video
 
   private var page: Int = 1
   var data: [Model] = []
@@ -17,17 +17,17 @@ class PictureVM: MainModelProtocol {
 
   func getData() {
     let params: [SearchParams: Any] = [.page: page]
-    Api.shared.getPopularPhotos(params: params) { pictures, err in
+    Api.shared.getPopularVideos(params: params) { videos, err in
       if err == nil {
         if self.page == 1 {
-          self.data = pictures
+          self.data = videos
           self.updateHandler?()
         } else {
           let nowCount = self.data.count
-          self.data += pictures
+          self.data += videos
           let newCount = self.data.count
           let rouwsToAdd: [Int] = Array((nowCount)...(newCount-1))
-          for item in pictures {
+          for item in videos {
             self.data.append(item)
           }
           self.loadedMore?(rouwsToAdd)

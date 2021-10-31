@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Result: Codable {
+struct PhotoResult: Codable {
   let total_results: Int // swiftlint:disable:this identifier_name
   let page: Int
   let per_page: Int // swiftlint:disable:this identifier_name

@@ -9,15 +9,21 @@ import UIKit
 import SnapKit
 
 protocol MainModelProtocol {
-  var data: [Photo] {get set}
+  associatedtype Model
+  var data: [Model] {get set}
   var updateHandler: (() -> Void)? { get set }
   var loadedMore: ((_ rows: [Int]) -> Void)? { get set }
   func getData()
   func loadMore()
 }
 
-class BaseVC: UIViewController {
-  var model: MainModelProtocol
+class BaseVC<ViewModelType: MainModelProtocol>:
+  UIViewController,
+  UICollectionViewDelegateFlowLayout,
+  UICollectionViewDataSource,
+  PinterestLayoutDelegate {
+
+  var model: ViewModelType
   lazy var navTitle: String = "" {
     didSet {
       configureNavBar(titleColor: .cDarkestGray, backgoundColor: .cLightGray, tintColor: .cDarkestGray, title: navTitle)
@@ -30,7 +36,7 @@ class BaseVC: UIViewController {
     return view
   }()
 
-  init(model: MainModelProtocol, title: String) {
+  init(model: ViewModelType, title: String) {
     self.model = model
     super.init(nibName: nil, bundle: nil)
     self.navTitle = title
@@ -76,9 +82,7 @@ class BaseVC: UIViewController {
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-}
 
-extension BaseVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return model.data.count
   }
@@ -108,9 +112,7 @@ extension BaseVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
       model.loadMore()
     }
   }
-}
 
-extension BaseVC: PinterestLayoutDelegate {
   func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
     let picWidth = UIScreen.main.bounds.width / 2 - 20
     let picHeight = Int(picWidth) * model.data[indexPath.item].height / model.data[indexPath.item].width

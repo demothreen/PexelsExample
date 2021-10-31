@@ -56,8 +56,19 @@ class Api {
       page = params[.page] as? Int ?? 1
     }
     let url = "https://api.pexels.com/v1/popular/?page=\(page)"
-    makeHTTPRequest(model: Result.self, url: url, method: .GET) { data, error in
+    makeHTTPRequest(model: PhotoResult.self, url: url, method: .GET) { data, error in
       onComplition(data?.photos ?? [], error as NSError?)
+    }
+  }
+
+  func getPopularVideos(params: [SearchParams: Any], onComplition: @escaping ([Video], NSError?) -> Void) {
+    var page: Int = 1
+    if params[.page] != nil {
+      page = params[.page] as? Int ?? 1
+    }
+    let url = "https://api.pexels.com/v1/videos/popular/?page=\(page)"
+    makeHTTPRequest(model: VideoResult.self, url: url, method: .GET) { data, error in
+      onComplition(data?.videos ?? [], error as NSError?)
     }
   }
 }

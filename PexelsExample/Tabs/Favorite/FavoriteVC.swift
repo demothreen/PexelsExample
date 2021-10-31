@@ -7,16 +7,16 @@
 
 import UIKit
 
-class FavoriteVC: BaseVC {
-
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    navTitle = "Favorite"
-  }
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-  }
-
-}
+//class FavoriteVC: BaseVC {
+//
+//  override func viewWillAppear(_ animated: Bool) {
+//    super.viewWillAppear(animated)
+//    navTitle = "Favorite"
+//  }
+//
+//  override func viewDidLoad() {
+//    super.viewDidLoad()
+//
+//  }
+//
+//}
