@@ -20,9 +20,9 @@ class MainTabController: UITabBarController, UITabBarControllerDelegate {
     let pictureVC = BaseVC.init(model: PictureVM(), title: "Pictures")
     let videoVC = BaseVC.init(model: PictureVM(), title: "Videos")
     let favVC = BaseVC.init(model: PictureVM(), title: "Favorite")
-    pictureVC.tabBarItem = getTabBarItem(title: "Pictures", imgName: "picture")
-    videoVC.tabBarItem = getTabBarItem(title: "Videos", imgName: "video")
-    favVC.tabBarItem = getTabBarItem(title: "Favorite", imgName: "favorite")
+    pictureVC.tabBarItem = getTabBarItem(imgName: "pictureTab")
+    videoVC.tabBarItem = getTabBarItem(imgName: "videoTab")
+    favVC.tabBarItem = getTabBarItem(imgName: "favoriteTab")
     let controllers = [pictureVC, videoVC, favVC]
     self.viewControllers = controllers.map { UINavigationController(rootViewController: $0) }
   }
@@ -38,9 +38,10 @@ class MainTabController: UITabBarController, UITabBarControllerDelegate {
     self.tabBar.layer.cornerRadius = tabBarHeight/2
   }
 
-  private func getTabBarItem(title: String, imgName: String) -> UITabBarItem {
-    let item = UITabBarItem(title: title, image: UIImage(named: imgName), tag: 1)
-    item.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+  private func getTabBarItem(imgName: String) -> UITabBarItem {
+    let item = UITabBarItem()
+    item.image = UIImage(named: imgName)?.withRenderingMode(.alwaysTemplate)
+    item.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
     return item
   }
 
