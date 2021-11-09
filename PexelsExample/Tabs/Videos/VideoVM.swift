@@ -18,7 +18,9 @@ class VideoVM: MainModelProtocol {
   func getData() {
     let params: [SearchParams: Any] = [.page: page]
     Api.shared.getPopularVideos(params: params) { videos, err in
+      print("### err", err)
       if err == nil {
+        print("### videos", videos)
         if self.page == 1 {
           self.data = videos
           self.updateHandler?()

@@ -22,6 +22,8 @@
 		4A3C1EB726E15FDA0012E074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3C1EB626E15FDA0012E074 /* Assets.xcassets */; };
 		4A3C1EBA26E15FDA0012E074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3C1EB826E15FDA0012E074 /* LaunchScreen.storyboard */; };
 		4A3C1EC226E161720012E074 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3C1EC126E161720012E074 /* MainTabController.swift */; };
+		4A4865FF273B09B300A449C7 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4865FE273B09B300A449C7 /* VideoVC.swift */; };
+		4A486601273B0A9C00A449C7 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A486600273B0A9C00A449C7 /* VideoCell.swift */; };
 		4A79DFAC270F63EB00747B10 /* FullImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79DFAB270F63EB00747B10 /* FullImageVC.swift */; };
 		4A9FA5E4272F157A00DD5AF0 /* VideoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FA5E3272F157A00DD5AF0 /* VideoVM.swift */; };
 		4A9FA5E6272F180E00DD5AF0 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FA5E5272F180E00DD5AF0 /* Video.swift */; };
@@ -50,6 +52,8 @@
 		4A3C1EB926E15FDA0012E074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A3C1EBB26E15FDA0012E074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A3C1EC126E161720012E074 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		4A4865FE273B09B300A449C7 /* VideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
+		4A486600273B0A9C00A449C7 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		4A79DFAB270F63EB00747B10 /* FullImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageVC.swift; sourceTree = "<group>"; };
 		4A9FA5E3272F157A00DD5AF0 /* VideoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVM.swift; sourceTree = "<group>"; };
 		4A9FA5E5272F180E00DD5AF0 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				4A9FA5E3272F157A00DD5AF0 /* VideoVM.swift */,
+				4A4865FE273B09B300A449C7 /* VideoVC.swift */,
+				4A486600273B0A9C00A449C7 /* VideoCell.swift */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 				4A9FA5E4272F157A00DD5AF0 /* VideoVM.swift in Sources */,
 				4A19CD9326F13AA90012B7BA /* FavoriteVC.swift in Sources */,
 				4A19CDDB26F2961E0012B7BA /* Picture.swift in Sources */,
+				4A4865FF273B09B300A449C7 /* VideoVC.swift in Sources */,
 				4A19CE5F26F686B80012B7BA /* ExtUIImageView.swift in Sources */,
 				4A19CD8926F0FA770012B7BA /* ExtUIViewController.swift in Sources */,
 				4A19CE6226F8CDB90012B7BA /* CustomLayout.swift in Sources */,
@@ -336,6 +343,7 @@
 				4A3C1EC226E161720012E074 /* MainTabController.swift in Sources */,
 				4A19CD9026F12BBF0012B7BA /* ExtUIColors.swift in Sources */,
 				4A79DFAC270F63EB00747B10 /* FullImageVC.swift in Sources */,
+				4A486601273B0A9C00A449C7 /* VideoCell.swift in Sources */,
 				4A19CE3926F3E7FA0012B7BA /* PictureVM.swift in Sources */,
 				4A19CE5D26F682D30012B7BA /* PictureCell.swift in Sources */,
 				4A9FA5E6272F180E00DD5AF0 /* Video.swift in Sources */,

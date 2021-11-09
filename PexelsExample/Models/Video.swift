@@ -24,7 +24,7 @@ struct Video: Codable {
   let image: String
   let user: User
   let videoFiles: [VideoFile]
-  let videoPictures: [VideoPictures]
+  let videoPictures: [VideoPicture]
 }
 
 struct User: Codable {
@@ -42,7 +42,7 @@ struct VideoFile: Codable {
   let link: String
 }
 
-struct VideoPictures: Codable {
+struct VideoPicture: Codable {
   let id: Int // swiftlint:disable:this identifier_name
   let picture: String
 }

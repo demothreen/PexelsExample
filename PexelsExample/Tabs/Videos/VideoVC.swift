@@ -1,18 +1,17 @@
 //
-//  PictureVC.swift
+//  VideoVC.swift
 //  PexelsExample
 //
 //  Created by demothreen on 10.11.2021.
 //
 
 import UIKit
-import SnapKit
 
-class PictureVC: UIViewController,
-                 UICollectionViewDelegateFlowLayout,
-                 UICollectionViewDataSource,
-                 PinterestLayoutDelegate {
-  var model = PictureVM()
+class VideoVC: UIViewController,
+               UICollectionViewDelegateFlowLayout,
+               UICollectionViewDataSource,
+               PinterestLayoutDelegate {
+  var model = VideoVM()
   lazy var navTitle: String = "" {
     didSet {
       configureNavBar(titleColor: .cDarkestGray, backgoundColor: .cLightGray, tintColor: .cDarkestGray, title: navTitle)
@@ -20,7 +19,7 @@ class PictureVC: UIViewController,
   }
   fileprivate var collectionView: UICollectionView = {
     let view = UICollectionView(frame: .zero, collectionViewLayout: CustomLayout())
-    view.register(PictureCell.self, forCellWithReuseIdentifier: "Cell")
+    view.register(VideoCell.self, forCellWithReuseIdentifier: "Cell")
     view.backgroundColor = .clear
     return view
   }()
@@ -28,7 +27,7 @@ class PictureVC: UIViewController,
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .cLightGray
-    navTitle = "Pictures"
+    navTitle = "Videos"
     model.getData()
     model.updateHandler = {
       DispatchQueue.main.async {
@@ -68,13 +67,13 @@ class PictureVC: UIViewController,
   }
 
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    let fullVC = FullImageVC(url: model.data[indexPath.row].src.large)
-    present(fullVC, animated: true, completion: nil)
+//    let fullVC = FullImageVC(url: model.data[indexPath.row].src.large)
+//    present(fullVC, animated: true, completion: nil)
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath) as! PictureCell // swiftlint:disable:this force_cast line_length
-    cell.photo = model.data[indexPath.row]
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath) as! VideoCell // swiftlint:disable:this force_cast line_length
+    cell.video = model.data[indexPath.row]
     cell.saveFavorite = { [unowned self] in
       //      print(model.data[indexPath.row].photographer)
     }
