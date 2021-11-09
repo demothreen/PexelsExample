@@ -23,8 +23,8 @@ struct Video: Codable {
   let url: String
   let image: String
   let user: User
-  let videoFiles: [VideoFile]
-  let videoPictures: [VideoPicture]
+  let video_files: [VideoFile] // swiftlint:disable:this identifier_name
+  let video_pictures: [VideoPicture] // swiftlint:disable:this identifier_name
 }
 
 struct User: Codable {
@@ -36,10 +36,10 @@ struct User: Codable {
 struct VideoFile: Codable {
   let id: Int // swiftlint:disable:this identifier_name
   let quality: String
-  let fileType: String
-  let height: Int
-  let width: Int
-  let link: String
+  let file_type: String // swiftlint:disable:this identifier_name
+  let height: Int?
+  let width: Int?
+  let link: String?
 }
 
 struct VideoPicture: Codable {
