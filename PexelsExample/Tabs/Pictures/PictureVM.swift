@@ -7,6 +7,15 @@
 
 import Foundation
 
+protocol MainModelProtocol {
+  associatedtype Model
+  var data: [Model] {get set}
+  var updateHandler: (() -> Void)? { get set }
+  var loadedMore: ((_ rows: [Int]) -> Void)? { get set }
+  func getData()
+  func loadMore()
+}
+
 class PictureVM: MainModelProtocol {
   typealias Model = Photo
 

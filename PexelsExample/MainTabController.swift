@@ -17,9 +17,9 @@ class MainTabController: UITabBarController, UITabBarControllerDelegate {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    let pictureVC = BaseVC.init(model: PictureVM(), title: "Pictures")
-    let videoVC = BaseVC.init(model: VideoVM(), title: "Videos")
-    let favVC = BaseVC.init(model: PictureVM(), title: "Favorite")
+    let pictureVC = PictureVC()
+    let videoVC = PictureVC() /**BaseVC.init(model: VideoVM(), title: "Videos") */
+    let favVC = PictureVC() /** BaseVC.init(model: PictureVM(), title: "Favorite") */
     pictureVC.tabBarItem = getTabBarItem(imgName: "pictureTab")
     videoVC.tabBarItem = getTabBarItem(imgName: "videoTab")
     favVC.tabBarItem = getTabBarItem(imgName: "favoriteTab")

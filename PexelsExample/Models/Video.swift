@@ -14,6 +14,7 @@ struct VideoResult: Codable {
   let next_page: String // swiftlint:disable:this identifier_name
   let videos: [Video]
 }
+
 struct Video: Codable {
   let id: Int // swiftlint:disable:this identifier_name
   let width: Int

@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4A19CD8926F0FA770012B7BA /* ExtUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CD8826F0FA770012B7BA /* ExtUIViewController.swift */; };
-		4A19CD8B26F0FBE20012B7BA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CD8A26F0FBE20012B7BA /* BaseVC.swift */; };
 		4A19CD8E26F127810012B7BA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A19CD8D26F127810012B7BA /* Colors.xcassets */; };
 		4A19CD9026F12BBF0012B7BA /* ExtUIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CD8F26F12BBF0012B7BA /* ExtUIColors.swift */; };
 		4A19CD9326F13AA90012B7BA /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CD9226F13AA90012B7BA /* FavoriteVC.swift */; };
 		4A19CDD326F21CF90012B7BA /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CDD226F21CF80012B7BA /* Api.swift */; };
 		4A19CDDB26F2961E0012B7BA /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CDDA26F2961E0012B7BA /* Picture.swift */; };
 		4A19CE3926F3E7FA0012B7BA /* PictureVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CE3826F3E7FA0012B7BA /* PictureVM.swift */; };
-		4A19CE5D26F682D30012B7BA /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CE5C26F682D20012B7BA /* BaseCell.swift */; };
+		4A19CE5D26F682D30012B7BA /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CE5C26F682D20012B7BA /* PictureCell.swift */; };
 		4A19CE5F26F686B80012B7BA /* ExtUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CE5E26F686B80012B7BA /* ExtUIImageView.swift */; };
 		4A19CE6226F8CDB90012B7BA /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CE6126F8CDB80012B7BA /* CustomLayout.swift */; };
 		4A3C1EAE26E15FD20012E074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3C1EAD26E15FD20012E074 /* AppDelegate.swift */; };
@@ -26,6 +25,7 @@
 		4A79DFAC270F63EB00747B10 /* FullImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79DFAB270F63EB00747B10 /* FullImageVC.swift */; };
 		4A9FA5E4272F157A00DD5AF0 /* VideoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FA5E3272F157A00DD5AF0 /* VideoVM.swift */; };
 		4A9FA5E6272F180E00DD5AF0 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FA5E5272F180E00DD5AF0 /* Video.swift */; };
+		4ABB61A0273B0325005E720C /* PictureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB619F273B0325005E720C /* PictureVC.swift */; };
 		4AD1E66B26E7F0A2004DDC97 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4AD1E66A26E7F0A2004DDC97 /* SnapKit */; };
 		E14A0F8FFE479A0D44BEBD58 /* Pods_PexelsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA23D083469D1A993B0B705 /* Pods_PexelsExample.framework */; };
 /* End PBXBuildFile section */
@@ -33,7 +33,6 @@
 /* Begin PBXFileReference section */
 		13F69D62BBAF59F9FF610606 /* Pods-PexelsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PexelsExample.release.xcconfig"; path = "Target Support Files/Pods-PexelsExample/Pods-PexelsExample.release.xcconfig"; sourceTree = "<group>"; };
 		4A19CD8826F0FA770012B7BA /* ExtUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIViewController.swift; sourceTree = "<group>"; };
-		4A19CD8A26F0FBE20012B7BA /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		4A19CD8D26F127810012B7BA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4A19CD8F26F12BBF0012B7BA /* ExtUIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIColors.swift; sourceTree = "<group>"; };
 		4A19CD9226F13AA90012B7BA /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
@@ -41,7 +40,7 @@
 		4A19CDDA26F2961E0012B7BA /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		4A19CDDD26F298CF0012B7BA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		4A19CE3826F3E7FA0012B7BA /* PictureVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureVM.swift; sourceTree = "<group>"; };
-		4A19CE5C26F682D20012B7BA /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		4A19CE5C26F682D20012B7BA /* PictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		4A19CE5E26F686B80012B7BA /* ExtUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIImageView.swift; sourceTree = "<group>"; };
 		4A19CE6126F8CDB80012B7BA /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
 		4A3C1EAA26E15FD20012E074 /* PexelsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PexelsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +53,7 @@
 		4A79DFAB270F63EB00747B10 /* FullImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageVC.swift; sourceTree = "<group>"; };
 		4A9FA5E3272F157A00DD5AF0 /* VideoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVM.swift; sourceTree = "<group>"; };
 		4A9FA5E5272F180E00DD5AF0 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		4ABB619F273B0325005E720C /* PictureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureVC.swift; sourceTree = "<group>"; };
 		4BE2E22320D721442AE43A2E /* Pods-PexelsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PexelsExample.debug.xcconfig"; path = "Target Support Files/Pods-PexelsExample/Pods-PexelsExample.debug.xcconfig"; sourceTree = "<group>"; };
 		8FA23D083469D1A993B0B705 /* Pods_PexelsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PexelsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -166,9 +166,6 @@
 				4A19CD9126F13A8B0012B7BA /* Favorite */,
 				4A3C1EC526E162B90012E074 /* Videos */,
 				4A3C1EC426E162B00012E074 /* Pictures */,
-				4A19CD8A26F0FBE20012B7BA /* BaseVC.swift */,
-				4A19CE5C26F682D20012B7BA /* BaseCell.swift */,
-				4A79DFAB270F63EB00747B10 /* FullImageVC.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -177,6 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				4A19CE3826F3E7FA0012B7BA /* PictureVM.swift */,
+				4A19CE5C26F682D20012B7BA /* PictureCell.swift */,
+				4A79DFAB270F63EB00747B10 /* FullImageVC.swift */,
+				4ABB619F273B0325005E720C /* PictureVC.swift */,
 			);
 			path = Pictures;
 			sourceTree = "<group>";
@@ -336,11 +336,11 @@
 				4A3C1EC226E161720012E074 /* MainTabController.swift in Sources */,
 				4A19CD9026F12BBF0012B7BA /* ExtUIColors.swift in Sources */,
 				4A79DFAC270F63EB00747B10 /* FullImageVC.swift in Sources */,
-				4A19CD8B26F0FBE20012B7BA /* BaseVC.swift in Sources */,
 				4A19CE3926F3E7FA0012B7BA /* PictureVM.swift in Sources */,
-				4A19CE5D26F682D30012B7BA /* BaseCell.swift in Sources */,
+				4A19CE5D26F682D30012B7BA /* PictureCell.swift in Sources */,
 				4A9FA5E6272F180E00DD5AF0 /* Video.swift in Sources */,
 				4A19CDD326F21CF90012B7BA /* Api.swift in Sources */,
+				4ABB61A0273B0325005E720C /* PictureVC.swift in Sources */,
 				4A3C1EB026E15FD20012E074 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
