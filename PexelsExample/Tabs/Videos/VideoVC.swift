@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 
 class VideoVC: UIViewController,
                UICollectionViewDelegateFlowLayout,
@@ -67,8 +68,11 @@ class VideoVC: UIViewController,
   }
 
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//    let fullVC = FullImageVC(url: model.data[indexPath.row].src.large)
-//    present(fullVC, animated: true, completion: nil)
+    if let url = model.data[indexPath.row].video_files[0].link, let videoUrl = URL(string: url) {
+      let videoVC = PlayerVC()
+      videoVC.videoUrl = videoUrl
+      present(videoVC, animated: true, completion: nil)
+    }
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
