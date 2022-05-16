@@ -18,7 +18,8 @@ class PlayerVC: AVPlayerViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.contentMode = .scaleAspectFit
+//    view.contentMode = .scaleAspectFill
+//    view.layer.masksToBounds = true?
     showsPlaybackControls = true
   }
 }
