@@ -23,10 +23,15 @@ class PictureVM: MainModelProtocol {
   var data: [Model] = []
   var updateHandler: (() -> Void)?
   var loadedMore: ((_ rows: [Int]) -> Void)?
+  private var api: Api
+
+  init(api: Api) {
+    self.api = api
+  }
 
   func getData() {
     let params: [SearchParams: Any] = [.page: page]
-    Api.shared.getPopularPhotos(params: params) { pictures, err in
+    api.getPopularPhotos(params: params) { pictures, err in
       if err == nil {
         if self.page == 1 {
           self.data = pictures

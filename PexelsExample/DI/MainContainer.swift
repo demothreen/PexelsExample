@@ -16,7 +16,8 @@ class MainContainer {
   private init() {
     assembler = Assembler(
       [
-        MainAssembly()
+        MainAssembly(),
+        AppAssembly()
       ]
     )
   }

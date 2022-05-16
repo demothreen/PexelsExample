@@ -12,8 +12,8 @@ class PictureVC: UIViewController,
                  UICollectionViewDelegateFlowLayout,
                  UICollectionViewDataSource,
                  PinterestLayoutDelegate {
-  var model = PictureVM()
-  lazy var navTitle: String = "" {
+  private var model: PictureVM
+  private lazy var navTitle: String = "" {
     didSet {
       configureNavBar(titleColor: .cDarkestGray, backgoundColor: .cLightGray, tintColor: .cDarkestGray, title: navTitle)
     }
@@ -24,6 +24,15 @@ class PictureVC: UIViewController,
     view.backgroundColor = .clear
     return view
   }()
+
+  init(vm: PictureVM) {
+    self.model = vm
+    super.init(nibName: nil, bundle: nil)
+  }
+
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -81,12 +90,11 @@ class PictureVC: UIViewController,
     return cell
   }
 
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize { // swiftlint:disable:this line_length
-    let itemSize = (collectionView.frame.width - (collectionView.contentInset.left + collectionView.contentInset.right + 10)) / 2 // swiftlint:disable:this line_length
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    let itemSize = (collectionView.frame.width - (collectionView.contentInset.left + collectionView.contentInset.right + 10)) / 2
     return CGSize(width: itemSize, height: itemSize)
   }
 
-  // swiftlint:disable:next line_length
   func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
     if indexPath.row == model.data.count - 1 {
       model.loadMore()
