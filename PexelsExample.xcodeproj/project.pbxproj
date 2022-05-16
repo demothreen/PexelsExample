@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4A11F20A2832D69100DBFA47 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4A11F2092832D69100DBFA47 /* Swinject */; };
 		4A11F20D2832D6CE00DBFA47 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 4A11F20C2832D6CE00DBFA47 /* SwinjectAutoregistration */; };
+		4A11F2102832D78C00DBFA47 /* MainContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A11F20F2832D78C00DBFA47 /* MainContainer.swift */; };
+		4A11F2132832D7F700DBFA47 /* MainTabAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A11F2122832D7F700DBFA47 /* MainTabAssembly.swift */; };
 		4A19CD8926F0FA770012B7BA /* ExtUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CD8826F0FA770012B7BA /* ExtUIViewController.swift */; };
 		4A19CD8E26F127810012B7BA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A19CD8D26F127810012B7BA /* Colors.xcassets */; };
 		4A19CD9026F12BBF0012B7BA /* ExtUIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19CD8F26F12BBF0012B7BA /* ExtUIColors.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A11F20F2832D78C00DBFA47 /* MainContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainer.swift; sourceTree = "<group>"; };
+		4A11F2122832D7F700DBFA47 /* MainTabAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabAssembly.swift; sourceTree = "<group>"; };
 		4A19CD8826F0FA770012B7BA /* ExtUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIViewController.swift; sourceTree = "<group>"; };
 		4A19CD8D26F127810012B7BA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4A19CD8F26F12BBF0012B7BA /* ExtUIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIColors.swift; sourceTree = "<group>"; };
@@ -76,6 +80,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A11F20E2832D77800DBFA47 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				4A11F2112832D7EA00DBFA47 /* MainTabAssembly */,
+				4A11F20F2832D78C00DBFA47 /* MainContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		4A11F2112832D7EA00DBFA47 /* MainTabAssembly */ = {
+			isa = PBXGroup;
+			children = (
+				4A11F2122832D7F700DBFA47 /* MainTabAssembly.swift */,
+			);
+			path = MainTabAssembly;
+			sourceTree = "<group>";
+		};
+		4A11F2152832D91100DBFA47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A3C1EAD26E15FD20012E074 /* AppDelegate.swift */,
+				4A3C1EAF26E15FD20012E074 /* SceneDelegate.swift */,
+				4A3C1EB826E15FDA0012E074 /* LaunchScreen.storyboard */,
+				4A3C1EBB26E15FDA0012E074 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4A19CD8726F0FA5D0012B7BA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,29 +180,27 @@
 		4A3C1EAC26E15FD20012E074 /* PexelsExample */ = {
 			isa = PBXGroup;
 			children = (
+				4A11F20E2832D77800DBFA47 /* DI */,
+				4A3C1EC326E1628F0012E074 /* Screens */,
+				4A19CD8726F0FA5D0012B7BA /* Extensions */,
 				4A19CE6026F8CD930012B7BA /* Layout */,
 				4A19CDD926F295FF0012B7BA /* Models */,
 				4A19CDD126F21CBA0012B7BA /* Network */,
 				4A19CD8C26F127650012B7BA /* Resources */,
-				4A19CD8726F0FA5D0012B7BA /* Extensions */,
-				4A3C1EC326E1628F0012E074 /* Tabs */,
-				4A3C1EAD26E15FD20012E074 /* AppDelegate.swift */,
-				4A3C1EAF26E15FD20012E074 /* SceneDelegate.swift */,
-				4A3C1EB826E15FDA0012E074 /* LaunchScreen.storyboard */,
-				4A3C1EBB26E15FDA0012E074 /* Info.plist */,
-				4A3C1EC126E161720012E074 /* MainTabController.swift */,
+				4A11F2152832D91100DBFA47 /* Supporting Files */,
 			);
 			path = PexelsExample;
 			sourceTree = "<group>";
 		};
-		4A3C1EC326E1628F0012E074 /* Tabs */ = {
+		4A3C1EC326E1628F0012E074 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4A3C1EC126E161720012E074 /* MainTabController.swift */,
 				4A19CD9126F13A8B0012B7BA /* Favorite */,
 				4A3C1EC526E162B90012E074 /* Videos */,
 				4A3C1EC426E162B00012E074 /* Pictures */,
 			);
-			path = Tabs;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		4A3C1EC426E162B00012E074 /* Pictures */ = {
@@ -284,11 +314,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9FA5E4272F157A00DD5AF0 /* VideoVM.swift in Sources */,
+				4A11F2132832D7F700DBFA47 /* MainTabAssembly.swift in Sources */,
 				4A19CD9326F13AA90012B7BA /* FavoriteVC.swift in Sources */,
 				4A19CDDB26F2961E0012B7BA /* Picture.swift in Sources */,
 				4A4865FF273B09B300A449C7 /* VideoVC.swift in Sources */,
 				4A19CE5F26F686B80012B7BA /* ExtUIImageView.swift in Sources */,
 				4A19CD8926F0FA770012B7BA /* ExtUIViewController.swift in Sources */,
+				4A11F2102832D78C00DBFA47 /* MainContainer.swift in Sources */,
 				4A889327274ABC0F00C0E9F2 /* PlayerVC.swift in Sources */,
 				4A19CE6226F8CDB90012B7BA /* CustomLayout.swift in Sources */,
 				4A3C1EAE26E15FD20012E074 /* AppDelegate.swift in Sources */,
@@ -444,7 +476,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 967NAX245W;
-				INFOPLIST_FILE = PexelsExample/Info.plist;
+				INFOPLIST_FILE = "PexelsExample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,7 +495,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 967NAX245W;
-				INFOPLIST_FILE = PexelsExample/Info.plist;
+				INFOPLIST_FILE = "PexelsExample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
