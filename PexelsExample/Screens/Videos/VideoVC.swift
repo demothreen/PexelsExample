@@ -12,7 +12,7 @@ class VideoVC: UIViewController,
                UICollectionViewDelegateFlowLayout,
                UICollectionViewDataSource,
                PinterestLayoutDelegate {
-  var model = VideoVM()
+  var model: VideoVM
   lazy var navTitle: String = "" {
     didSet {
       configureNavBar(titleColor: .cDarkestGray, backgoundColor: .cLightGray, tintColor: .cDarkestGray, title: navTitle)
@@ -24,6 +24,15 @@ class VideoVC: UIViewController,
     view.backgroundColor = .clear
     return view
   }()
+
+  init(vm: VideoVM) {
+    self.model = vm
+    super.init(nibName: nil, bundle: nil)
+  }
+
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()

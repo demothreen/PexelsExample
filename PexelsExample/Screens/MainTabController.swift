@@ -18,7 +18,7 @@ class MainTabController: UITabBarController, UITabBarControllerDelegate {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     let pictureVC = MainContainer.resolve(PictureVC.self)
-    let videoVC = VideoVC()
+    let videoVC = MainContainer.resolve(VideoVC.self)
     let favVC = MainContainer.resolve(PictureVC.self)
     pictureVC.tabBarItem = getTabBarItem(imgName: "pictureTab")
     videoVC.tabBarItem = getTabBarItem(imgName: "videoTab")
